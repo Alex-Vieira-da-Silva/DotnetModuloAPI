@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dtKMNpZcDMeeX64spmjpxRPdMO27gyvgGv4qpqujiD0=",
+  "Source": "DotnetModuloAPI",
+  "BasePath": "_content/DotnetModuloAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
