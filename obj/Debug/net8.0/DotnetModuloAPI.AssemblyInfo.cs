@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotnetModuloAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0829c0bcdd0d506dd8346c7bcb03961d722285ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9a5a426643b334331d35f36b236cc0511ef3109")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotnetModuloAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotnetModuloAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
