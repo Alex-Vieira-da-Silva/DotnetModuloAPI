@@ -18,8 +18,8 @@ namespace DotnetModuloAPI.Controllers
             _context = context;
         }
 
-        [HttpPost("Cadastrar")]
-        public IActionResult Cadastrar(Contato contato)
+        [HttpPost("Criar")]
+        public IActionResult Criar(Contato contato)
         {
             _context.Add(contato);
             _context.SaveChanges();
@@ -39,7 +39,7 @@ namespace DotnetModuloAPI.Controllers
             [HttpGet("ObterTodos{nome}")]
         public IActionResult ObterPorNome(string nome)
         {
-            var contatos = _context.Contatos.Where(x => x.Nome.Contains(nome));
+            var contatos = _context.Contatos.Where(x => x.Nome == nome);
             return Ok(contatos);
         }
 
@@ -57,30 +57,30 @@ namespace DotnetModuloAPI.Controllers
         [HttpPut("Atualizar/{id}")]
         public IActionResult Atualizar(int id, Contato contato)
         {
-            var _contato = _context.Contatos.Find(id);
+            var contatoBanco = _context.Contatos.Find(id);
 
-            if (_contato == null)
+            if (contatoBanco == null)
                 return NotFound();
 
-            _contato.Nome = contato.Nome;
-            _contato.Telefone = contato.Telefone;
-            _contato.Ativo = contato.Ativo;
+            contatoBanco.Nome = contato.Nome;
+            contatoBanco.Telefone = contato.Telefone;
+            contatoBanco.Ativo = contato.Ativo;
 
-            _context.Contatos.Update(_contato);
+            _context.Contatos.Update(contatoBanco);
             _context.SaveChanges();
 
-            return Ok(_contato);
+            return Ok(contatoBanco);
         }
 
         [HttpDelete("Apagar{id}")]
         public IActionResult Delete(int id)
         {
-            var contato = _context.Contatos.Find(id);
+            var contatoBanco = _context.Contatos.Find(id);
 
-            if (contato == null)
+            if (contatoBanco == null)
                 return NotFound();
 
-            _context.Contatos.Remove(contato);
+            _context.Contatos.Remove(contatoBanco);
             _context.SaveChanges();
 
             return NoContent();
